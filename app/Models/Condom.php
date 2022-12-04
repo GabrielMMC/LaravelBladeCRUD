@@ -10,6 +10,7 @@ class Condom extends Model
 {
     use HasFactory, SoftDeletes;
 
+    //Permissão para preencher no banco
     protected $fillable = [
         'name',
         'price',
@@ -19,6 +20,7 @@ class Condom extends Model
         'file',
     ];
 
+    //Função que retorna a marca vinculada com a camisinha de acordo com a brand_id
     public function brand()
     {
         return $this->hasOne(Brand::class, 'id', 'brand_id');

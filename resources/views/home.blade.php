@@ -2,7 +2,6 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" >
 
 @section('content')
-{{$actual_condom = ''}}
 <div class="container bg-white rounded shadow">
     <div class="row p-5 mb-5 justify-content-center align-items-center" style="min-height: calc(100vh - 200px)">
         <div class="col-md-6 bg-red">
@@ -62,6 +61,8 @@
         <p class='lead'><em>As melhores opções selecionadas com base no seu gosto</em></p>
     </div>
     <div class="row mb-5 text-white justify-content-center py-5">
+
+        //Se o total de camisinhas for maior do que 0, são listados todos os registros
         @if(count($condons) > 0){
             @foreach ($condons as $condom)
             <div class="col-lg-3 col-md-4 col-sm-6 bg-dark rounded m-3 hvr-grow" style="padding: 0">

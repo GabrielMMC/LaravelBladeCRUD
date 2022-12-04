@@ -1,4 +1,5 @@
 <?php
+// Controle geral das camisinhas, onde faz o CRUD(Criar, Listar, Editar, Deletar)
 
 namespace App\Http\Controllers;
 

@@ -1,4 +1,5 @@
 <?php
+//Controle para gerenciar os pedidos do usuário quando clicam no botão de comprar
 
 namespace App\Http\Controllers;
 

@@ -1,10 +1,13 @@
 @extends('layouts.app')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" >
 
+{{-- Section para renderizar dentro da página principal da navbar --}}
 @section('content')
 <div class="d-flex justify-content-center" style='height: calc(100vh - 355px)'>
     <div class="col-md-8" style='max-width: 800px'>
             <div class="card">
+
+                {{-- Se for admin, aparece tudo isso, se não aparece sem permissão --}}
                 @if($permission)
                 <div class="card-header">Lista de Marcas</div>
 
@@ -20,6 +23,8 @@
                             </tr>
                         </thead>
                         <tbody>
+
+                            {{-- Looping em cada marca retornada do back-end --}}
                             @foreach ($brands as $brand)
                             <tr>
                                 <td>{{$brand->name}}</td>

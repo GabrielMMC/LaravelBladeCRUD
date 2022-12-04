@@ -1,4 +1,5 @@
 <?php
+// Usado para login
 
 namespace App\Http\Controllers;
 

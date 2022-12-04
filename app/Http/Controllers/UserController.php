@@ -1,4 +1,5 @@
 <?php
+//Contem apénas uma função para pegar os usuário cadastrados no sistema
 
 namespace App\Http\Controllers;
 

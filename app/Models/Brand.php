@@ -10,6 +10,7 @@ class Brand extends Model
 {
     use HasFactory, SoftDeletes;
 
+    // Permissão para preencher no banco
     protected $fillable = [
         'name',
         'quality',

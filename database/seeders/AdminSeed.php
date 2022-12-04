@@ -14,6 +14,8 @@ class AdminSeed extends Seeder
      *
      * @return void
      */
+
+    //Onde semeia e popula o banco de dados, esse é o comando --> php artisan db:seed AdminSeed
     public function run()
     {
         DB::table('users')->insert([

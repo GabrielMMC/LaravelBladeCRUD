@@ -21,6 +21,8 @@ class BrandRequest extends FormRequest
      *
      * @return array<string, mixed>
      */
+
+    //  Mensagens caso chegue algum campo em branco
     public function messages()
     {
         return [
@@ -29,6 +31,7 @@ class BrandRequest extends FormRequest
         ];
     }
 
+    // Regras para definir o que é requerido em cada função nas controllers
     public function rules()
     {
         switch (strtolower($this->route()->getActionMethod())):

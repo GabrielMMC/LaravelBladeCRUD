@@ -17,6 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    //Permissão para preencher no banco
     protected $fillable = [
         'name',
         'email',
@@ -42,6 +43,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    //Função que retorna os pedidos vinculados com o usuário de acordo com o user_id do pedido
     public function orders()
     {
         return $this->hasMany(Order::class, 'user_id', 'id');

@@ -1,10 +1,15 @@
+{{-- Página onde cria e edita marcas --}}
+
 @extends('layouts.app')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" >
 
+{{-- Section para renderizar dentro da página principal da navbar --}}
 @section('content')
 <div class="d-flex justify-content-center" style='min-height: calc(100vh - 355px)'>
     <div class="col-md-8 mb-5" style='max-width: 800px'>
             <div class="card">
+
+                {{-- Se for admin, aparece tudo isso, se não aparece sem permissão --}}
                 @if($permission)
             <div class="card">
                 <div class="card-header">
@@ -34,6 +39,9 @@
                         </div>
                     </form>
                     @else
+
+                    {{-- A partir do else, caso o ID for nulo, estará renderizando o formulário que cria marca --}}
+
                     <form action="{{ url('brand/create') }}" method="POST">
                         @csrf
                         <div class="mb-3">
